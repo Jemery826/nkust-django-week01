@@ -1,3 +1,5 @@
+#資料庫
+
 from django.db import models
 from django.utils import timezone
 
@@ -5,10 +7,11 @@ from django.utils import timezone
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
-    pub_date = models.DateTimeField(default=timezone.now)
+    vid = models.CharField(max_length=20,default="vi1CYWbyE-Q")
+    pub_date = models.DateTimeField(default=timezone.now) #傳回defalt，系統時間timezone.now
 
     class Meta:
-        ordering = ('-pub_date',)
+        ordering = ('-pub_date',) #-為遞減排序
 
     def __str__(self):
-        return self.title
+        return self.title #以title秀出，若pub_data則為發布時間

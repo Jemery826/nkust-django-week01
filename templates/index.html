@@ -39,7 +39,20 @@
     </div>
   </div>
 </nav>
+  <br>
+  <table class="table table-info table-striped">
+    <thead class="table-dark"><td><b>標題</b></td><td><b>影片ID</b></td><td><b>張貼日期時間</b></td></thead>
+    {% for post in posts %}
+    <tr>
+      <td><a href='https://www.youtube.com/watch?v={{ post.vid }}' target="_blank" style="color:#3C3C3C;">{{ post.title }}</a></td> 
+      <td><a href='/play/{{post.id}}/' target="_blank" style="text-decoration:none;color:green;">{{ post.vid }}</a></td>
+      <td>{{ post.pub_date }} </td>
+    </tr>
+    {% endfor %}
+    
+  </table>
     <hr>
+
     海環系教育網，2021版權所有，歡迎抖內
 	</div>
     <!-- Optional JavaScript; choose one of the two! -->

@@ -1,7 +1,14 @@
 <center>
 <h2> 下期樂透預測 </h2>
 <hr>
-{{ lotto }} <br> 
-特別號：{{ special }}
+<table width="400">
+	<tr bkcolor= #ffffff>
+{% for n in lotto%} 
+	<td>  {{ n}} </td>
+{% endfor %}
+
+</tr>
+</table> 
+<br>特別號：{{ special }}
 </center>
 <hr>
